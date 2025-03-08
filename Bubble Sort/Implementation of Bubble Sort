@@ -1,0 +1,68 @@
+Bubble Sort Implementation in Java
+This repository contains a simple Java implementation of the Bubble Sort algorithm. Below is a detailed explanation of the code, how to use it, and how to understand its functionality.
+
+Table of Contents
+Introduction
+Code Explanation
+How to Run the Code
+Example Output
+Conclusion
+
+Introduction
+Bubble Sort is one of the simplest sorting algorithms. It works by repeatedly swapping adjacent elements if they are in the wrong order. This process is repeated until the entire array is sorted. Although Bubble Sort is easy to understand and implement, it is not efficient for large datasets due to its O(n²) time complexity.
+
+Code Explanation
+1. Class bubble
+This class contains the bSort method, which implements the Bubble Sort algorithm.
+Method bSort(int[] array, int n):
+Takes an integer array array and its size n as input.
+Uses nested loops to compare adjacent elements and swap them if they are in the wrong order.
+The outer loop runs n times, and the inner loop compares each element with the next one.
+
+2. Class bubble_Sort
+This is the main class that handles user input, calls the sorting method, and displays the results.
+Method main(String[] args):
+Prompts the user to input the number of elements they want to sort.
+Dynamically creates an array of the specified size.
+Takes input for each element of the array.
+Displays the unsorted array.
+Calls the bSort method from the bubble class to sort the array.
+Displays the sorted array.
+
+How to Run the Code
+Prerequisites:
+Ensure you have Java installed on your system.
+You can check this by running java -version in your terminal or command prompt.
+
+Steps to Run:
+Save the code in a file named bubble_Sort.java.
+Open a terminal or command prompt and navigate to the directory where the file is saved.
+Compile the code using the command:
+javac bubble_Sort.java
+Run the compiled code using the command:
+java bubble_Sort
+
+Input:
+The program will prompt you to enter the number of elements you want to sort.
+After entering the number of elements, you will be asked to input each element one by one.
+Output:
+The program will display the unsorted array, sort it using Bubble Sort, and then display the sorted array.
+
+Example Output
+Number Of Element You Want to Sort: 5
+Input Elements In An Array:---
+Enter 1 Element: 34
+Enter 2 Element: 12
+Enter 3 Element: 56
+Enter 4 Element: 7
+Enter 5 Element: 23
+-----------------------------------
+UnSorted Data Are:-
+ 34 12 56 7 23
+-----------------------------------
+Data Are Sorted Using Bubble Sort
+ 7 12 23 34 56
+-----------------------------------
+Conclusion
+This Java program demonstrates the Bubble Sort algorithm in action. It is a simple and effective way to understand how sorting works, especially for beginners. However, keep in mind that Bubble Sort is not the most efficient algorithm for large datasets. For larger datasets, consider using more advanced sorting algorithms like Quick Sort or Merge Sort.
+Feel free to modify and experiment with the code to deepen your understanding of sorting algorithms!
