@@ -1,0 +1,114 @@
+Insertion Sort in Java
+This Java program demonstrates the implementation of the Insertion Sort algorithm. Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is efficient for small datasets and is often used in practice for small input sizes or as a building block for more complex algorithms.
+
+Code Explanation
+1. Class Insertion
+This class contains the insert_sort method, which performs the insertion sort algorithm.
+Method: insert_sort(int[] array, int n)
+Parameters:
+array: The array of integers to be sorted.
+n: The number of elements in the array.
+
+How it works:
+It iterates through the array starting from the second element (i = 1).
+For each element, it stores the current value in a temporary variable (temp).
+It compares the temp value with the previous elements in the array and shifts them to the right if they are greater than temp.
+Once the correct position is found, temp is placed in its sorted position.
+Time Complexity: O(n²) in the worst case (when the array is in reverse order), but O(n) in the best case (when the array is already sorted).
+
+2. Class Insertion_Sort
+This is the main class that handles user input, calls the sorting method, and displays the results.
+Method: main(String[] args)
+Steps:
+Input:
+The user is prompted to enter the number of elements they want to sort.
+The user then inputs the elements of the array one by one.
+
+Display Unsorted Array:
+The program displays the array before sorting.
+
+Sorting:
+An object of the Insertion class is created, and the insert_sort method is called to sort the array.
+
+Display Sorted Array:
+The program displays the array after sorting.
+
+How to Run the Code
+Compile the Code:
+Save the code in a file named Insertion_Sort.java.
+Open a terminal or command prompt and navigate to the directory where the file is saved.
+
+compile the code using the following command:
+javac Insertion_Sort.java
+
+Run the Program:
+After successful compilation, run the program using:
+java Insertion_Sort
+
+Input:
+The program will prompt you to enter the number of elements and the elements themselves.
+
+Example:
+Number Of Element You Want to Sort: 5
+Input Elements In An Array:---
+Enter 1 Element: 12
+Enter 2 Element: 4
+Enter 3 Element: 7
+Enter 4 Element: 1
+Enter 5 Element: 9
+
+Output:
+The program will display the unsorted array, sort it, and then display the sorted array.
+
+Example:
+UnSorted Data Are---
+ 12 4 7 1 9
+-----------------------------------
+Data Are Sorted Using Insertion Sort
+ 1 4 7 9 12
+-----------------------------------
+Key Features of the Code
+Dynamic Array Size:
+The program allows the user to specify the number of elements to sort, making it flexible for different input sizes.
+User-Friendly Input/Output:
+The program prompts the user for input and clearly displays the unsorted and sorted arrays.
+
+Modular Design:
+The sorting logic is encapsulated in a separate class (Insertion), making the code reusable and easy to maintain.
+Advantages of Insertion Sort
+
+Simple to implement.
+Efficient for small datasets or nearly sorted arrays.
+Works well with linked lists and online data (data that is received one at a time).
+Limitations of Insertion Sort
+Inefficient for large datasets due to its O(n²) time complexity.
+Not suitable for real-time applications with large input sizes.
+Example Walkthrough
+
+Input:
+Number Of Element You Want to Sort: 5
+Input Elements In An Array:---
+Enter 1 Element: 12
+Enter 2 Element: 4
+Enter 3 Element: 7
+Enter 4 Element: 1
+Enter 5 Element: 9
+
+Execution:
+The unsorted array is [12, 4, 7, 1, 9].
+The insert_sort method sorts the array step by step:
+After the first iteration: [4, 12, 7, 1, 9]
+After the second iteration: [4, 7, 12, 1, 9]
+After the third iteration: [1, 4, 7, 12, 9]
+After the fourth iteration: [1, 4, 7, 9, 12]
+
+Output:
+UnSorted Data Are---
+ 12 4 7 1 9
+-----------------------------------
+Data Are Sorted Using Insertion Sort
+ 1 4 7 9 12
+-----------------------------------
+Conclusion
+This program provides a clear and practical implementation of the Insertion Sort algorithm in Java. It is a great starting point for understanding sorting algorithms and can be extended or modified for more complex use cases.
+
