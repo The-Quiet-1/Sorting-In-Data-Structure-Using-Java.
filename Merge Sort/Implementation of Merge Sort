@@ -1,0 +1,95 @@
+Overview
+This Java program implements the Merge Sort algorithm, a divide-and-conquer sorting technique that recursively splits an array into smaller subarrays, sorts them, and then merges them back together.
+
+Code Structure
+1. Merge Class (Core Algorithm)
+The Merge class contains the two main methods that implement the merge sort algorithm:
+
+Divide(int array[], int start, int end)
+
+Purpose: Recursively divides the array into halves until single elements remain
+Parameters:
+array: The array to be sorted
+start: Starting index of current subarray
+end: Ending index of current subarray
+
+Key Operations:
+Base case: Returns if subarray has 0 or 1 elements (start >= end)
+Calculates midpoint: mid = start + (end-start)/2
+Recursively divides left and right halves
+Calls Conquer() to merge sorted halves
+Conquer(int array[], int start, int mid, int end)
+
+Purpose: Merges two sorted subarrays into a single sorted array
+Parameters:
+array: Original array being sorted
+start: Start index of first subarray
+mid: End index of first subarray (mid+1 starts second subarray)
+end: End index of second subarray
+
+Key Operations:
+Creates temporary array NewArray to hold merged result
+Uses three while loops to:
+Merge by comparing elements from both subarrays
+Copy remaining elements from first subarray (if any)
+Copy remaining elements from second subarray (if any)
+Copies merged result back to original array
+
+2. Merge_Sort Class (Driver)
+The Merge_Sort class contains the main() method that handles user interaction and demonstrates the sorting:
+
+Input Collection:
+Prompts user for number of elements to sort
+Collects array elements from user input
+
+Sorting Demonstration:
+Displays unsorted array
+Creates Merge object and calls Divide() to sort the array
+Displays sorted array
+
+How Merge Sort Works
+Divide Phase:
+The array is recursively split into halves until each subarray contains a single element
+Conquer (Merge) Phase:
+Sorted subarrays are merged by:
+Comparing elements from both subarrays
+Placing the smaller element in the correct position
+Handling any remaining elements
+The merged results are copied back to the original array
+
+Time Complexity
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+
+Space Complexity
+O(n) - Requires additional space for temporary arrays during merging
+
+Usage Example
+Number Of Element You Want to Sort: 5
+Input Elements In An Array:---
+Enter 1 Element: 12
+Enter 2 Element: 5
+Enter 3 Element: 8
+Enter 4 Element: 19
+Enter 5 Element: 3
+
+UnSorted Data Are---
+ 12 5 8 19 3
+
+Data Are Sorted Using Merge Sort
+ 3 5 8 12 19
+
+Key Features
+Recursive implementation of divide-and-conquer strategy
+Stable sort (maintains relative order of equal elements)
+Not an in-place sort (requires additional memory)
+Well-suited for large datasets
+
+Limitations
+Requires O(n) additional space
+For small arrays, simpler algorithms like insertion sort might be more efficient
+Recursive implementation may cause stack overflow for extremely large arrays
+
+This implementation provides a clear demonstration of the merge sort algorithm with user interaction for input and output display.
+
